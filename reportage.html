@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportage - Paris 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html" data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" class="active" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        
+        <h1 id="page-title" data-fr="Reportage des Jeux Olympiques de Paris 2024" data-en="Paris 2024 Olympic Games Report">Reportage des Jeux Olympiques de Paris 2024</h1>
+    </header>
+
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png"  style="max-width: 20px; margin-left: 40%;">     </span>
+        <span class="flag"><img src="gb.png"style="max-width: 25px; ">  </span>
+        <div class="toggle-btn"></div>
+    </div>
+    
+    <script>
+       
+        document.getElementById("language-toggle").addEventListener("click", function() {
+         const currentLang = this.getAttribute("data-lang");
+         const newLang = currentLang === "fr" ? "en" : "fr";
+         this.setAttribute("data-lang", newLang);
+         
+         // Récupérer tous les éléments avec des attributs data-fr et data-en
+         const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+         elementsToTranslate.forEach(element => {
+             // Récupérer le texte dans l'attribut approprié
+             const text = element.getAttribute(`data-${newLang}`);
+             if (text) {
+                 element.textContent = text; // Mettre à jour le texte affiché
+             }
+         });
+ 
+         console.log("Langue sélectionnée :", newLang);
+     });
+   </script>
+
+
+
+
+    <main class="content">
+        <section class="hero">
+            <h2 id="section-title" data-fr="Visite des Sites des JOP 2024" data-en="Visit of the 2024 Olympic Sites">Visite des Sites des JOP 2024</h2>
+            <p id="description" data-fr="Retour sur notre sortie du mercredi 4 décembre où nous avons exploré divers sites olympiques. Découvrez nos clichés marquants ci-dessous."
+               data-en="Review of our trip on Wednesday, December 4, where we explored various Olympic sites. Discover our remarkable shots below.">Retour sur notre sortie du mercredi 4 décembre où nous avons exploré divers sites olympiques. Découvrez nos clichés marquants ci-dessous.</p>
+               <br><br><br>
+
+               <h2 id="video-title" data-fr="Vidéo sortie" data-en="Video Release">Vidéo sortie</h2>
+
+               <iframe width="864" height="480" src="https://www.youtube.com/embed/Xn0JuZ-5wVY?si=LnGyFmY7yE0Jey5G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               
+               <p id="thanks-message" style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;" data-fr="Merci à Ghassen, Elliot et Kishan pour les photos." data-en="Thanks to Ghassen, Elliot, and Kishan for the photos.">Merci à Ghassen, Elliot et Kishan pour les photos.</p>
+               
+               <br><br><br><br><h2 id="carousel-title" data-fr="Carousel d'image" data-en="Image Carousel">Carousel d'image</h2>
+               
+               <div class="carousel">
+                   <div class="slides">
+               
+                       <div class="slide" id="slide1">
+                           <img src="img/1.jpg" alt="Site Olympique 1">
+                           <p data-fr="Gare Saint-Denis - Pleyel : le nouveau hub du Grand Paris Express." data-en="Saint-Denis - Pleyel Station: the new hub of the Grand Paris Express.">Gare Saint-Denis - Pleyel : le nouveau hub du Grand Paris Express.</p>
+                       </div>
+               
+                       <div class="slide" id="slide2">
+                           <img src="img/2.jpg" alt="Site Olympique 2">
+                           <p data-fr="Fresque du logo des Jeux Olympiques reliés à chacunes des nouvelles lignes de métro." data-en="Mural of the Olympic Games logo linked to each new metro line.">Fresque du logo des Jeux Olympiques reliés à chacunes des nouvelles lignes de métro.</p>
+                       </div>
+               
+                       <div class="slide" id="slide3">
+                           <img src="img/3.jpg" alt="Site Olympique 3">
+                           <p data-fr="Critique ironique des nuisances liées au nouvel échangeur des JO 2024." data-en="Ironic critique of the nuisances caused by the new 2024 Games interchange.">Critique ironique des nuisances liées au nouvel échangeur des JO 2024.</p>
+                       </div>
+               
+                       <div class="slide" id="slide4">
+                           <img src="img/4.jpg" alt="Site Olympique 4">
+                           <p data-fr="Perspective sur le collège Dora Maar impacté par les nuisances du nouvel échangeur construit pour les JO 2024." data-en="View of the Dora Maar college affected by the nuisances of the new interchange built for the 2024 Games.">Perspective sur le collège Dora Maar impacté par les nuisances du nouvel échangeur construit pour les JO 2024.</p>
+                       </div>
+               
+                       <div class="slide" id="slide5">
+                           <img src="img/5.jpg" alt="Site Olympique 5">
+                           <p data-fr="Bâtiment où ont logé les athlètes des JO 2024." data-en="Building where athletes stayed during the 2024 Games.">Bâtiment où ont logé les athlètes des JO 2024.</p>
+                       </div>
+               
+                       <div class="slide" id="slide6">
+                           <img src="img/6.jpg" alt="Site Olympique 6">
+                           <p data-fr="Infrastructures mises en place pour le logement des athlètes." data-en="Facilities established for athletes' accommodation.">Infrastructures mises en place pour le logement des athlètes.</p>
+                       </div>
+               
+                       <div class="slide" id="slide7">
+                           <img src="img/7.jpg" alt="Site Olympique 7">
+                           <p data-fr="Vue panoramique sur l'architecture des infrastructures." data-en="Panoramic view of the infrastructure's architecture.">Vue panoramique sur l'architecture des infrastructures.</p>
+                       </div>
+               
+                       <div class="slide" id="slide8">
+                           <img src="img/8.jpg" alt="Site Olympique 8">
+                           <p data-fr="Autre bâtiment dédié au logement des athlètes." data-en="Another building dedicated to athletes' accommodation.">Autre bâtiment dédié au logement des athlètes.</p>
+                       </div>
+               
+                       <div class="slide" id="slide9">
+                           <img src="img/9.jpg" alt="Site Olympique 9">
+                           <p data-fr="Nouvelles infrastructures dédiées aux JO 2024." data-en="New infrastructure dedicated to the 2024 Games.">Nouvelles infrastructures dédiées aux JO 2024.</p>
+                       </div>
+               
+                       <div class="slide" id="slide10">
+                           <img src="img/10.jpg" alt="Site Olympique 10">
+                           <p data-fr="Le Franchissement Urbain Pleyel : un pont stratégique reliant quartiers, future gare et sites des JO 2024 à Saint-Denis." data-en="The Pleyel Urban Crossing: a strategic bridge connecting neighborhoods, the future station, and 2024 Games sites in Saint-Denis.">Le Franchissement Urbain Pleyel : un pont stratégique reliant quartiers, future gare et sites des JO 2024 à Saint-Denis.</p>
+                       </div>
+               
+                       <div class="slide" id="slide11">
+                           <img src="img/11.jpg" alt="Site Olympique 11">
+                           <p data-fr="Fresque chronologique représentant chacune des innovations pour les JO 2024." data-en="Chronological mural representing each innovation for the 2024 Games.">Fresque chronologique représentant chacune des innovations pour les JO 2024.</p>
+                       </div>
+               
+                       <div class="slide" id="slide12">
+                           <img src="img/12.jpg" alt="Site Olympique 12">
+                           <p data-fr="Autre visuel du Franchissement Urbain Pleyel." data-en="Another view of the Pleyel Urban Crossing.">Autre visuel du Franchissement Urbain Pleyel.</p>
+                       </div>
+               
+                       <div class="slide" id="slide13">
+                           <img src="img/13.jpg" alt="Site Olympique 13">
+                           <p data-fr="Espaces verts et structure triangulaire sur le Franchissement Urbain Pleyel." data-en="Green spaces and triangular structure on the Pleyel Urban Crossing.">Espaces verts et structure triangulaire sur le Franchissement Urbain Pleyel.</p>
+                       </div>
+               
+                       <div class="slide" id="slide14">
+                           <img src="img/14.jpg" alt="Site Olympique 14">
+                           <p data-fr="Autre visuel des espaces verts sur le pont urbain Pleyel." data-en="Another view of the green spaces on the Pleyel Urban Crossing.">Autre visuel des espaces verts sur le pont urbain Pleyel.</p>
+                       </div>
+               
+                       <div class="slide" id="slide15">
+                           <img src="img/15.jpg" alt="Site Olympique 15">
+                           <p data-fr="Le groupe scolaire Aretha Franklin impacté par les aménagements liés aux JO 2024 à Saint-Denis." data-en="The Aretha Franklin school affected by 2024 Games developments in Saint-Denis.">Le groupe scolaire Aretha Franklin impacté par les aménagements liés aux JO 2024 à Saint-Denis.</p>
+                       </div>
+
+
+                    <div class="slide" id="slide16">
+    <img src="img/16.jpg" alt="Site Olympique 16">
+    <p data-fr="Nouvelle façade écologique d'un bâtiment du village olympique." data-en="New eco-friendly facade of a building in the Olympic Village.">Nouvelle façade écologique d'un bâtiment du village olympique.</p>
+</div>
+
+<div class="slide" id="slide17">
+    <img src="img/17.jpg" alt="Site Olympique 17">
+    <p data-fr="Stade de France, site emblématique des JO 2024." data-en="Stade de France, iconic site of the 2024 Games.">Stade de France, site emblématique des JO 2024.</p>
+</div>
+
+<div class="slide" id="slide18">
+    <img src="img/18.jpg" alt="Site Olympique 18">
+    <p data-fr="Parc sportif inauguré pour les compétitions des JO." data-en="Sports park inaugurated for Olympic competitions.">Parc sportif inauguré pour les compétitions des JO.</p>
+</div>
+
+<div class="slide" id="slide19">
+    <img src="img/19.jpg" alt="Site Olympique 19">
+    <p data-fr="Installation de panneaux solaires pour alimenter les infrastructures." data-en="Solar panel installation to power the infrastructure.">Installation de panneaux solaires pour alimenter les infrastructures.</p>
+</div>
+
+<div class="slide" id="slide20">
+    <img src="img/20.jpg" alt="Site Olympique 20">
+    <p data-fr="Transport durable : navettes électriques mises en place." data-en="Sustainable transport: electric shuttles implemented.">Transport durable : navettes électriques mises en place.</p>
+</div>
+
+<div class="slide" id="slide21">
+    <img src="img/21.jpg" alt="Site Olympique 21">
+    <p data-fr="Vue aérienne du complexe olympique." data-en="Aerial view of the Olympic complex.">Vue aérienne du complexe olympique.</p>
+</div>
+
+<div class="slide" id="slide22">
+    <img src="img/22.jpg" alt="Site Olympique 22">
+    <p data-fr="Piscine olympique avec filtration écologique." data-en="Olympic swimming pool with eco-friendly filtration.">Piscine olympique avec filtration écologique.</p>
+</div>
+
+<div class="slide" id="slide23">
+    <img src="img/23.jpg" alt="Site Olympique 23">
+    <p data-fr="Infrastructure respectueuse de l'environnement pour le logement." data-en="Eco-friendly housing infrastructure.">Infrastructure respectueuse de l'environnement pour le logement.</p>
+</div>
+
+<div class="slide" id="slide24">
+    <img src="img/24.jpg" alt="Site Olympique 24">
+    <p data-fr="Centre de presse des JO 2024." data-en="2024 Games Press Center.">Centre de presse des JO 2024.</p>
+</div>
+
+<div class="slide" id="slide25">
+    <img src="img/25.jpg" alt="Site Olympique 25">
+    <p data-fr="Espaces verts aménagés autour du village olympique." data-en="Green spaces developed around the Olympic Village.">Espaces verts aménagés autour du village olympique.</p>
+</div>
+
+                    <div class="slide" id="slide26">
+                        <img src="img/26.jpg" alt="Site Olympique 26">
+                        <p></p>
+                    </div>
+                    
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+
+            
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="main-footer">
+        <p id="footer-text" data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+    
+        // Vérifier si le thème sombre est déjà activé dans le stockage local
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        // Changer le thème lorsque l'utilisateur clique sur le switch
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+    <script src="carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transports Durables - Paris 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html" class="active" data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        <h1 id="page-title" data-fr="Transports Durables - Paris 2024" data-en="Sustainable Transport - Paris 2024">Transports Durables - Paris 2024</h1>
+    </header>
+    
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png"  style="max-width: 20px; margin-left: 40%;">     </span>
+        <span class="flag"><img src="gb.png"style="max-width: 25px; ">  </span>
+        <div class="toggle-btn"></div>
+    </div>
+    
+    <script>
+       
+        document.getElementById("language-toggle").addEventListener("click", function() {
+         const currentLang = this.getAttribute("data-lang");
+         const newLang = currentLang === "fr" ? "en" : "fr";
+         this.setAttribute("data-lang", newLang);
+         
+         // Récupérer tous les éléments avec des attributs data-fr et data-en
+         const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+         elementsToTranslate.forEach(element => {
+             // Récupérer le texte dans l'attribut approprié
+             const text = element.getAttribute(`data-${newLang}`);
+             if (text) {
+                 element.textContent = text; // Mettre à jour le texte affiché
+             }
+         });
+ 
+         console.log("Langue sélectionnée :", newLang);
+     });
+   </script>
+
+
+<main class="content">
+    <section class="hero">
+        <h2 id="hero-title" data-fr="Transports durables" data-en="Sustainable Transport">Transports durables</h2>
+        <p id="hero-text" data-fr="Les transports durables jouent un rôle crucial dans la transition écologique et l'amélioration de la qualité de vie dans les zones urbaines. Les Jeux Olympiques et Paralympiques de 2024 (JOP2024) constituent une opportunité majeure pour accélérer ces innovations." data-en="Sustainable transport plays a crucial role in the ecological transition and improving the quality of life in urban areas. The 2024 Olympic and Paralympic Games (JOP2024) provide a major opportunity to accelerate these innovations.">Les transports durables jouent un rôle crucial dans la transition écologique et l'amélioration de la qualité de vie dans les zones urbaines. Les Jeux Olympiques et Paralympiques de 2024 (JOP2024) constituent une opportunité majeure pour accélérer ces innovations.</p>
+    </section>
+
+    <section class="details">
+        <article class="card">
+            <h3 id="innovation-title" data-fr="Innovations mises en place pour les JOP2024" data-en="Innovations Implemented for the 2024 Olympic Games">Innovations mises en place pour les JOP2024</h3>
+            <p id="innovation-text" data-fr="Pour répondre aux besoins des habitants et des visiteurs tout en réduisant l'impact environnemental, des projets ambitieux ont vu le jour :" data-en="To meet the needs of residents and visitors while reducing environmental impact, ambitious projects have been launched:">Pour répondre aux besoins des habitants et des visiteurs tout en réduisant l'impact environnemental, des projets ambitieux ont vu le jour :</p>
+            <ul>
+                <li><b data-fr="Extension des lignes de métro" data-en="Extension of Metro Lines">Extension des lignes de métro</b>: <span data-fr="Plusieurs lignes ont été prolongées pour faciliter les déplacements et réduire la congestion des routes :" data-en="Several lines have been extended to ease travel and reduce road congestion:">Plusieurs lignes ont été prolongées pour faciliter les déplacements et réduire la congestion des routes :</span></li>
+                <ul>
+                    <li><b data-fr="Ligne 14" data-en="Line 14">Ligne 14</b>: <span data-fr="Prolongée pour relier Saint-Denis Pleyel et Orly, facilitant l'accès entre l'aéroport et le centre de Paris." data-en="Extended to connect Saint-Denis Pleyel and Orly, facilitating access between the airport and central Paris.">Prolongée pour relier Saint-Denis Pleyel et Orly, facilitant l'accès entre l'aéroport et le centre de Paris.</span></li>
+                    <li><b data-fr="Ligne 15 (Grand Paris Express)" data-en="Line 15 (Grand Paris Express)">Ligne 15 (Grand Paris Express)</b>: <span data-fr="Amélioration des connexions en Île-de-France." data-en="Improvement of connections in the Île-de-France region.">Amélioration des connexions en Île-de-France.</span></li>
+                    <li><b data-fr="Ligne 12" data-en="Line 12">Ligne 12</b>: <span data-fr="Prolongée jusqu’à Aubervilliers, améliorant la connectivité au nord-est de Paris." data-en="Extended to Aubervilliers, improving connectivity to the northeast of Paris.">Prolongée jusqu’à Aubervilliers, améliorant la connectivité au nord-est de Paris.</span></li>
+                    <li><b data-fr="Ligne 11" data-en="Line 11">Ligne 11</b>: <span data-fr="Étendue à l’est, jusqu’à Rosny-sous-Bois." data-en="Extended to the east, to Rosny-sous-Bois.">Étendue à l’est, jusqu’à Rosny-sous-Bois.</span></li>
+                </ul>
+                <li><b data-fr="Pistes cyclables" data-en="Bicycle Lanes">Pistes cyclables</b>: <span data-fr="Des pistes supplémentaires ont été aménagées pour encourager l’usage du vélo." data-en="Additional bike lanes have been created to encourage cycling.">Des pistes supplémentaires ont été aménagées pour encourager l’usage du vélo.</span></li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3 id="mobility-title" data-fr="Priorité à la mobilité douce" data-en="Priority to Soft Mobility">Priorité à la mobilité douce</h3>
+            <p id="mobility-text" data-fr="La mobilité douce est au cœur des politiques de transport durable :" data-en="Soft mobility is at the heart of sustainable transport policies:">La mobilité douce est au cœur des politiques de transport durable :</p>
+            <ul>
+                <li><b data-fr="Piétons" data-en="Pedestrians">Piétons</b>: <span data-fr="Amélioration des espaces piétonniers." data-en="Improvement of pedestrian areas.">Amélioration des espaces piétonniers.</span></li>
+                <li><b data-fr="Vélos et trottinettes électriques" data-en="Bicycles and Electric Scooters">Vélos et trottinettes électriques</b>: <span data-fr="Infrastructures adaptées et services de partage développés." data-en="Adapted infrastructure and developed sharing services.">Infrastructures adaptées et services de partage développés.</span></li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3 id="future-development-title" data-fr="Développement futur" data-en="Future Development">Développement futur</h3>
+            <p id="future-development-text" data-fr="Ces projets s'inscrivent dans une vision à long terme pour renforcer la durabilité des infrastructures :" data-en="These projects are part of a long-term vision to strengthen the sustainability of infrastructures:">Ces projets s'inscrivent dans une vision à long terme pour renforcer la durabilité des infrastructures :</p>
+            <ul>
+                <li><b data-fr="Projets à long terme" data-en="Long-Term Projects">Projets à long terme</b>: <span data-fr="Prolongements des lignes de métro et modernisation des réseaux existants." data-en="Extensions of metro lines and modernization of existing networks.">Prolongements des lignes de métro et modernisation des réseaux existants.</span></li>
+                <li><b data-fr="Impact sur les flux de transport" data-en="Impact on Transport Flows">Impact sur les flux de transport</b>: <span data-fr="Meilleure accessibilité, réduction des temps de trajet, et expérience plus fluide pour les visiteurs." data-en="Better accessibility, reduced travel times, and a smoother experience for visitors.">Meilleure accessibilité, réduction des temps de trajet, et expérience plus fluide pour les visiteurs.</span></li>
+            </ul>
+        </article>
+    </section>
+</main>
+
+
+    <footer class="main-footer">
+        <p id="footer-text" data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman</p>
+    </footer>
+
+
+
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+    
+        // Vérifier si le thème sombre est déjà activé dans le stockage local
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        // Changer le thème lorsque l'utilisateur clique sur le switch
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+    
+ 
+
+</body>
+</html>

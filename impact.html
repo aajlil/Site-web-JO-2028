@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Social et Environnemental - Paris 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html" data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" class="active" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        <h1 id="page-title" data-fr="Impact Social et Environnemental - Paris 2024" data-en="Social and Environmental Impact - Paris 2024">Impact Social et Environnemental - Paris 2024</h1>
+    </header>
+    
+
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png"  style="max-width: 20px; margin-left: 40%;">     </span>
+        <span class="flag"><img src="gb.png"style="max-width: 25px; ">  </span>
+        <div class="toggle-btn"></div>
+    </div>
+    
+    <script>
+       
+        document.getElementById("language-toggle").addEventListener("click", function() {
+         const currentLang = this.getAttribute("data-lang");
+         const newLang = currentLang === "fr" ? "en" : "fr";
+         this.setAttribute("data-lang", newLang);
+         
+         // Récupérer tous les éléments avec des attributs data-fr et data-en
+         const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+         elementsToTranslate.forEach(element => {
+             // Récupérer le texte dans l'attribut approprié
+             const text = element.getAttribute(`data-${newLang}`);
+             if (text) {
+                 element.textContent = text; // Mettre à jour le texte affiché
+             }
+         });
+ 
+         console.log("Langue sélectionnée :", newLang);
+     });
+   </script>
+
+<main class="content">
+    <section class="hero">
+        <h2>
+            <span data-fr="Les Opportunités Mises en Avant" data-en="Highlighted Opportunities">Les Opportunités Mises en Avant</span>
+        </h2>
+        <article class="infrastructure">
+            <h3>
+                <span data-fr="Un Élan pour l’Économie Locale" data-en="A Boost for the Local Economy">Un Élan pour l’Économie Locale</span>
+            </h3>
+            <ul>
+                <li>
+                    <strong>
+                        <span data-fr="Tourisme :" data-en="Tourism:">Tourisme :</span>
+                    </strong>
+                    <span data-fr="La ville pourrait devenir une destination phare, créant un dynamisme pour les commerces locaux." data-en="The city could become a leading destination, generating dynamism for local businesses.">La ville pourrait devenir une destination phare, créant un dynamisme pour les commerces locaux.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Emploi :" data-en="Employment:">Emploi :</span>
+                    </strong>
+                    <span data-fr="Des emplois pourraient émerger dans la construction, le tourisme et les services." data-en="Jobs could emerge in construction, tourism, and services.">Des emplois pourraient émerger dans la construction, le tourisme et les services.</span>
+                </li>
+            </ul>
+        </article>
+
+        <article class="infrastructure">
+            <h3>
+                <span data-fr="Des Infrastructures Repensées pour le Quotidien" data-en="Infrastructure Reimagined for Everyday Life">Des Infrastructures Repensées pour le Quotidien</span>
+            </h3>
+            <ul>
+                <li>
+                    <strong>
+                        <span data-fr="Transports :" data-en="Transportation:">Transports :</span>
+                    </strong>
+                    <span data-fr="Des routes et des réseaux de transport modernes rendraient les déplacements plus simples et durables." data-en="Modern roads and transport networks would make travel easier and more sustainable.">Des routes et des réseaux de transport modernes rendraient les déplacements plus simples et durables.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Services :" data-en="Services:">Services :</span>
+                    </strong>
+                    <span data-fr="Des améliorations dans la santé, l’éducation et les loisirs bénéficieraient à tous." data-en="Improvements in healthcare, education, and leisure would benefit everyone.">Des améliorations dans la santé, l’éducation et les loisirs bénéficieraient à tous.</span>
+                </li>
+            </ul>
+        </article>
+
+        <article class="infrastructure">
+            <h3>
+                <span data-fr="Une Nouvelle Énergie Culturelle et Sportive" data-en="A New Cultural and Sporting Energy">Une Nouvelle Énergie Culturelle et Sportive</span>
+            </h3>
+            <ul>
+                <li>
+                    <strong>
+                        <span data-fr="Événements :" data-en="Events:">Événements :</span>
+                    </strong>
+                    <span data-fr="Des activités régulières renforceraient les liens entre habitants." data-en="Regular activities would strengthen the bonds between residents.">Des activités régulières renforceraient les liens entre habitants.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Traditions :" data-en="Traditions:">Traditions :</span>
+                    </strong>
+                    <span data-fr="Valoriser les richesses locales et promouvoir la diversité culturelle." data-en="Promote local wealth and cultural diversity.">Valoriser les richesses locales et promouvoir la diversité culturelle.</span>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="details">
+        <br /><br /><br /><h2 style="color: azure; text-align: center;">
+            <span data-fr="Les Préoccupations des Habitants" data-en="Concerns of the Residents">Les Préoccupations des Habitants</span>
+        </h2>
+        <br /><br /><article class="infrastructure">
+            <h3>
+                <span data-fr="Les Coûts pour la Communauté" data-en="Costs for the Community">Les Coûts pour la Communauté</span>
+            </h3>
+            <ul>
+                <li>
+                    <strong>
+                        <span data-fr="Budget :" data-en="Budget:">Budget :</span>
+                    </strong>
+                    <span data-fr="Utilisation transparente de l'argent public." data-en="Transparent use of public money.">Utilisation transparente de l'argent public.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Taxes :" data-en="Taxes:">Taxes :</span>
+                    </strong>
+                    <span data-fr="Financements équilibrés pour éviter une pression fiscale excessive." data-en="Balanced funding to avoid excessive tax pressure.">Financements équilibrés pour éviter une pression fiscale excessive.</span>
+                </li>
+            </ul>
+        </article>
+
+        <article class="infrastructure">
+            <h3>
+                <span data-fr="L'Impact sur le Logement" data-en="Impact on Housing">L'Impact sur le Logement</span>
+            </h3> 
+            <ul>
+                <li>
+                    <strong>
+                        <span data-fr="Prix des Loyers :" data-en="Rent Prices:">Prix des Loyers :</span>
+                    </strong>
+                    <span data-fr="Prévenir la hausse des loyers grâce à des mesures de régulation." data-en="Prevent rising rent prices through regulatory measures.">Prévenir la hausse des loyers grâce à des mesures de régulation.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Inclusion :" data-en="Inclusion:">Inclusion :</span>
+                    </strong>
+                    <span data-fr="Maintenir la diversité des quartiers par des politiques volontaristes." data-en="Maintain neighborhood diversity through proactive policies.">Maintenir la diversité des quartiers par des politiques volontaristes.</span>
+                </li>
+            </ul>
+        </article>
+
+        <article class="infrastructure">
+            <h3>
+                <span data-fr="Des Effets Durables à Garantir" data-en="Ensuring Lasting Effects">Des Effets Durables à Garantir</span>
+            </h3>
+            <ul>
+                <li>
+                    <strong>
+                        <span data-fr="Bénéfices immédiats :" data-en="Immediate Benefits:">Bénéfices immédiats :</span>
+                    </strong>
+                    <span data-fr="Maximiser les retombées économiques et sociales." data-en="Maximize economic and social outcomes.">Maximiser les retombées économiques et sociales.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Héritage :" data-en="Legacy:">Héritage :</span>
+                    </strong>
+                    <span data-fr="Laisser une trace bénéfique durable après l’événement." data-en="Leave a lasting beneficial legacy after the event.">Laisser une trace bénéfique durable après l’événement.</span>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="hero">
+        <h2>
+            <span data-fr="Comment Avancer Ensemble ?" data-en="How to Move Forward Together?">Comment Avancer Ensemble ?</span>
+        </h2>
+        <article class="infrastructure">
+            <ul>
+                <li>
+                    <strong>
+                        <span data-fr="Impliquer les Habitants :" data-en="Involve the Residents:">Impliquer les Habitants :</span>
+                    </strong>
+                    <span data-fr="Organiser des rencontres citoyennes pour favoriser le dialogue." data-en="Organize citizen meetings to encourage dialogue.">Organiser des rencontres citoyennes pour favoriser le dialogue.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Transparence Totale :" data-en="Total Transparency:">Transparence Totale :</span>
+                    </strong>
+                    <span data-fr="Expliquer clairement les objectifs, coûts et bénéfices." data-en="Clearly explain the objectives, costs, and benefits.">Expliquer clairement les objectifs, coûts et bénéfices.</span>
+                </li>
+                <li>
+                    <strong>
+                        <span data-fr="Mesurer les Résultats :" data-en="Measure Results:">Mesurer les Résultats :</span>
+                    </strong>
+                    <span data-fr="Suivre les impacts pour ajuster les décisions." data-en="Track impacts to adjust decisions." >Suivre les impacts pour ajuster les décisions.</span>
+                </li>
+            </ul>
+            <p>
+                <span data-fr="En plaçant les habitants au cœur du projet, cette initiative peut transformer la ville de manière durable et inclusive." data-en="By placing residents at the heart of the project, this initiative can transform the city in a sustainable and inclusive way.">
+                    En plaçant les habitants au cœur du projet, cette initiative peut transformer la ville de manière durable et inclusive.
+                </span>
+            </p>
+        </article>
+    </section>
+</main>
+
+
+    <footer class="main-footer">
+        <p id="footer-text" data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman</p>
+    </footer>
+
+
+ 
+
+
+
+
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+    
+        // Vérifier si le thème sombre est déjà activé dans le stockage local
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        // Changer le thème lorsque l'utilisateur clique sur le switch
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

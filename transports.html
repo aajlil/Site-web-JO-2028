@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transports - Paris 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" class="active" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html" data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        <h1 id="page-title" data-fr="Transports pour les Jeux Olympiques de Paris 2024" data-en="Transport for the Paris 2024 Olympic Games">Transports pour les Jeux Olympiques de Paris 2024</h1>
+    </header>
+    
+
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+
+
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png"  style="max-width: 20px; margin-left: 40%;">     </span>
+        <span class="flag"><img src="gb.png"style="max-width: 25px; ">  </span>
+        <div class="toggle-btn"></div>
+    </div>
+    
+    <script>
+       
+        document.getElementById("language-toggle").addEventListener("click", function() {
+         const currentLang = this.getAttribute("data-lang");
+         const newLang = currentLang === "fr" ? "en" : "fr";
+         this.setAttribute("data-lang", newLang);
+         
+         // Récupérer tous les éléments avec des attributs data-fr et data-en
+         const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+         elementsToTranslate.forEach(element => {
+             // Récupérer le texte dans l'attribut approprié
+             const text = element.getAttribute(`data-${newLang}`);
+             if (text) {
+                 element.textContent = text; // Mettre à jour le texte affiché
+             }
+         });
+ 
+         console.log("Langue sélectionnée :", newLang);
+     });
+   </script>
+   <main class="content">
+    <section class="hero">
+        <h2 data-fr="Systèmes de Transport Innovants" data-en="Innovative Transport Systems">Systèmes de Transport Innovants</h2>
+        <p data-fr="Explorez les solutions de transport durables et efficaces mises en place pour Paris 2024." 
+           data-en="Explore the sustainable and efficient transport solutions implemented for Paris 2024.">
+           Explorez les solutions de transport durables et efficaces mises en place pour Paris 2024.
+        </p>
+    </section>
+
+    <section class="transport-info">
+        <div class="card">
+            <h3 data-fr="Métro et RER" data-en="Metro and RER">Métro et RER</h3>
+            <p data-fr="Le réseau de métro et RER sera renforcé pendant les Jeux, avec des lignes fonctionnant 24h/24 sur certains axes stratégiques. La ligne 14 sera prolongée jusqu'à l'aéroport d'Orly, facilitant l'accès aux sites olympiques." 
+               data-en="The metro and RER network will be strengthened during the Games, with some lines operating 24/7 on key routes. Line 14 will be extended to Orly Airport, improving access to Olympic sites.">
+               Le réseau de métro et RER sera renforcé pendant les Jeux, avec des lignes fonctionnant 24h/24 sur certains axes stratégiques. La ligne 14 sera prolongée jusqu'à l'aéroport d'Orly, facilitant l'accès aux sites olympiques.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3 data-fr="Bus Olympiques" data-en="Olympic Buses">Bus Olympiques</h3>
+            <p data-fr="Des lignes de bus spéciales seront modifiées pour relier les principaux sites olympiques. Ces bus fonctionneront avec des énergies propres (électrique ou hydrogène) pour minimiser l'impact environnemental." 
+               data-en="Special bus routes will be adjusted to connect major Olympic sites. These buses will operate on clean energy (electric or hydrogen) to minimize environmental impact.">
+               Des lignes de bus spéciales seront modifiées pour relier les principaux sites olympiques. Ces bus fonctionneront avec des énergies propres (électrique ou hydrogène) pour minimiser l'impact environnemental.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 data-fr="Vélos et Trottinettes en libre-service" data-en="Self-service Bikes and Scooters">Vélos et Trottinettes en libre-service</h3>
+            <p data-fr="Le nombre de vélos et trottinettes en libre-service sera augmenté, et des pistes cyclables temporaires seront créées pour encourager la mobilité douce pendant les Jeux." 
+               data-en="The number of self-service bikes and scooters will be increased, and temporary bike lanes will be created to promote sustainable mobility during the Games.">
+               Le nombre de vélos et trottinettes en libre-service sera augmenté, et des pistes cyclables temporaires seront créées pour encourager la mobilité douce pendant les Jeux.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 data-fr="Navettes Fluviales" data-en="River Shuttles">Navettes Fluviales</h3>
+            <p data-fr="Des navettes fluviales sur la Seine relieront différents sites olympiques, offrant une expérience de transport unique et pittoresque aux spectateurs." 
+               data-en="River shuttles on the Seine will connect different Olympic sites, offering a unique and scenic transport experience for spectators.">
+               Des navettes fluviales sur la Seine relieront différents sites olympiques, offrant une expérience de transport unique et pittoresque aux spectateurs.
+            </p>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2 data-fr="Carte interactive des transports" data-en="Interactive Transport Map">Carte interactive des transports</h2>
+        <div id="map">
+            <iframe src="https://umap.openstreetmap.fr/fr/map/jo-paris-2024_1000592#13/48.8607/2.3421" style="width: 100%; height: 500px;"></iframe>
+        </div>
+    </section>
+
+    <section class="transport-tips">
+        <h2 data-fr="Conseils pour se déplacer pendant les JO" data-en="Tips for Getting Around During the Games">Conseils pour se déplacer pendant les JO</h2>
+        <ul>
+            <li data-fr="Planifiez vos déplacements à l'avance" data-en="Plan your trips in advance">Planifiez vos déplacements à l'avance</li>
+            <li data-fr="Privilégiez les transports en commun et les modes de déplacement doux" data-en="Use public transport and eco-friendly travel modes">Privilégiez les transports en commun et les modes de déplacement doux</li>
+            <li data-fr="Téléchargez l'application officielle des JO pour des informations en temps réel sur les transports" data-en="Download the official Games app for real-time transport updates">Téléchargez l'application officielle des JO pour des informations en temps réel sur les transports</li>
+            <li data-fr="Prévoyez du temps supplémentaire pour vos trajets, surtout aux heures de pointe" data-en="Allow extra travel time, especially during peak hours">Prévoyez du temps supplémentaire pour vos trajets, surtout aux heures de pointe</li>
+        </ul>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <p data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" 
+       data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">
+       &copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman
+    </p>
+</footer>
+
+
+
+<script>
+    const themeToggle = document.getElementById("theme-toggle");
+
+    // Vérifier si le thème sombre est déjà activé dans le stockage local
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+    }
+
+    // Changer le thème lorsque l'utilisateur clique sur le switch
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

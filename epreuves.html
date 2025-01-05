@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructures - Paris 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" class="active" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html" data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        <h1 id="page-title" data-fr="Épreuves des Jeux Olympiques de Paris 2024" data-en="Paris 2024 Olympic Games Events">Épreuves des Jeux Olympiques de Paris 2024</h1>
+    </header>
+    
+
+
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+
+
+
+
+
+
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png"  style="max-width: 20px; margin-left: 40%;">     </span>
+        <span class="flag"><img src="gb.png"style="max-width: 25px; ">  </span>
+        <div class="toggle-btn"></div>
+    </div>
+    
+    <script>
+       
+        document.getElementById("language-toggle").addEventListener("click", function() {
+         const currentLang = this.getAttribute("data-lang");
+         const newLang = currentLang === "fr" ? "en" : "fr";
+         this.setAttribute("data-lang", newLang);
+         
+         // Récupérer tous les éléments avec des attributs data-fr et data-en
+         const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+         elementsToTranslate.forEach(element => {
+             // Récupérer le texte dans l'attribut approprié
+             const text = element.getAttribute(`data-${newLang}`);
+             if (text) {
+                 element.textContent = text; // Mettre à jour le texte affiché
+             }
+         });
+ 
+         console.log("Langue sélectionnée :", newLang);
+     });
+   </script>
+
+    <main class="content">
+    <section class="hero">
+        <h2 data-fr="Présentation des Epreuves" data-en="Event Overview">Présentation des Epreuves</h2>
+        <p data-fr="Découvrez les installations et les aspects durables de trois épreuves phares des Jeux Olympiques de Paris 2024." data-en="Discover the facilities and sustainable aspects of three major events at the Paris 2024 Olympic Games.">Découvrez les installations et les aspects durables de trois épreuves phares des Jeux Olympiques de Paris 2024.</p>
+    </section>
+
+    <section class="details">
+        <article class="infrastructure">
+            <h3 data-fr="1. Paris La Défense Arena - Natation" data-en="1. Paris La Défense Arena - Swimming">1. Paris La Défense Arena - Natation</h3>
+            <img src="nata.jpg" alt="Paris La Défense Arena" class="infrastructure-image" width="500" height="300">
+            <p><strong data-fr="Installation :" data-en="Facility :">Installation :</strong> Les épreuves de natation se dérouleront à Paris La Défense Arena, à Nanterre. Cette installation ultramoderne comprend :</p>
+            <ul>
+                <li><strong data-fr="Un bassin olympique de 50m" data-en="A 50m Olympic swimming pool">Un bassin olympique de 50m</strong></li>
+                <li><strong data-fr="Des tribunes pouvant accueillir jusqu'à 40 000 spectateurs" data-en="Seating for up to 40,000 spectators">Des tribunes pouvant accueillir jusqu'à 40 000 spectateurs</strong></li>
+            </ul>
+            <p><strong data-fr="Localisation et accès :" data-en="Location and access :">Localisation et accès :</strong><br>
+                Adresse : 99 Jard. de l'Arche, 92000 Nanterre<br>
+                Accès : Métro (Ligne 1, station "La Défense"), RER (Ligne A, station "La Défense"), Tramway (Ligne 2, station "La Défense"), Bus (Lignes 73 et 163)</p>
+            <p><strong data-fr="Aspect durable :" data-en="Sustainability features :">Aspect durable :</strong><br>
+                Réutilisation des bassins, gestion optimisée de l'énergie, utilisation de matériaux écologiques et promotion du recyclage.</p>
+        </article>
+
+        <article class="infrastructure">
+            <h3 data-fr="2. Stade de France - Athlétisme" data-en="2. Stade de France - Athletics">2. Stade de France - Athlétisme</h3>
+            <img src="std.jpg" alt="Stade de France" class="infrastructure-image" width="500" height="300">
+            <p><strong data-fr="Installation :" data-en="Facility :">Installation :</strong> Le Stade de France accueillera les épreuves d'athlétisme, avec des installations modernes :</p>
+            <ul>
+                <li><strong data-fr="Piste d'athlétisme de 400m" data-en="400m running track">Piste d'athlétisme de 400m</strong></li>
+                <li><strong data-fr="Aires de lancer et de saut" data-en="Throwing and jumping areas">Aires de lancer et de saut</strong></li>
+                <li><strong data-fr="Capacité de 80 000 spectateurs" data-en="80,000 spectators capacity">Capacité de 80 000 spectateurs</strong></li>
+            </ul>
+            <p><strong data-fr="Localisation et accès :" data-en="Location and access :">Localisation et accès :</strong><br>
+                Adresse : 93200 Saint-Denis<br>
+                Accès : RER (Ligne B, station "La Plaine Stade de France"), Métro (Ligne 13, station "Saint-Denis - Porte de Paris")</p>
+            <p><strong data-fr="Aspect durable :" data-en="Sustainability features :">Aspect durable :</strong><br>
+                Utilisation d'une infrastructure existante, récupération des eaux de pluie, système de gestion des déchets et amélioration de l'efficacité énergétique.</p>
+        </article>
+
+        <article class="infrastructure">
+            <h3 data-fr="3. Champs de Mars - Beach Volley" data-en="3. Champs de Mars - Beach Volleyball">3. Champs de Mars - Beach Volley</h3>
+            <img src="tour.jpg" alt="Beach Volley Paris 2024" class="infrastructure-image" width="500" height="300">
+            <p><strong data-fr="Installation :" data-en="Facility :">Installation :</strong> Le site temporaire pour les épreuves de Beach Volley se situe au Champs de Mars, au pied de la Tour Eiffel :</p>
+            <ul>
+                <li><strong data-fr="Terrain de Beach-Volley 8x16m" data-en="8x16m Beach Volleyball court">Terrain de Beach-Volley 8x16m</strong></li>
+                <li><strong data-fr="Sol tapissé de sable provenant de la région de l'Aisne" data-en="Sand from the Aisne region">Sol tapissé de sable provenant de la région de l'Aisne</strong></li>
+                <li><strong data-fr="Tribunes temporaires pour 12 860 spectateurs" data-en="Temporary seating for 12,860 spectators">Tribunes temporaires pour 12 860 spectateurs</strong></li>
+            </ul>
+            <p><strong data-fr="Localisation et accès :" data-en="Location and access :">Localisation et accès :</strong><br>
+                Adresse : Stade Tour Eiffel, Champs de Mars, 75007 Paris<br>
+                Accès : RER (Ligne C, stations "Pont de l'Alma"), Métro (Ligne 9, station "Alma-Marceau")</p>
+            <p><strong data-fr="Aspect durable :" data-en="Sustainability features :">Aspect durable :</strong><br>
+                Structure démontable et réutilisable, sable recyclé, matériaux écologiques, et utilisation d'énergies renouvelables.</p>
+        </article>
+    </section>
+</main>
+
+
+    <footer class="main-footer">
+        <p id="footer-text" data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman</p>
+    </footer>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+    
+        // Vérifier si le thème sombre est déjà activé dans le stockage local
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        // Changer le thème lorsque l'utilisateur clique sur le switch
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+</body>
+</html>

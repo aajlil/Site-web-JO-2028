@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annexes - Sources des pages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html"  data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" class="active" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        <h1 id="page-title" data-fr="Annexes - Sources des pages" data-en="Appendices - Page Sources">Annexes - Sources des pages</h1>
+    </header>
+    
+
+
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png"  style="max-width: 20px; margin-left: 40%;">     </span>
+        <span class="flag"><img src="gb.png"style="max-width: 25px; ">  </span>
+        <div class="toggle-btn"></div>
+    </div>
+    
+    <script>
+       
+        document.getElementById("language-toggle").addEventListener("click", function() {
+         const currentLang = this.getAttribute("data-lang");
+         const newLang = currentLang === "fr" ? "en" : "fr";
+         this.setAttribute("data-lang", newLang);
+         
+         // Récupérer tous les éléments avec des attributs data-fr et data-en
+         const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+         elementsToTranslate.forEach(element => {
+             // Récupérer le texte dans l'attribut approprié
+             const text = element.getAttribute(`data-${newLang}`);
+             if (text) {
+                 element.textContent = text; // Mettre à jour le texte affiché
+             }
+         });
+ 
+         console.log("Langue sélectionnée :", newLang);
+     });
+   </script>
+
+
+    <main class="content">
+        <section class="hero">
+            <h2>Sources des pages</h2>
+            <p>Les informations sur le Village Olympique proviennent des sources suivantes :</p>
+        </section>
+    
+        <section class="details"> <!-- Conteneur pour la grille -->
+            <article class="infrastructure">
+                <h3>1. Village Olympique </h3>
+                <ul>
+                    <li><a href="https://www.paris2024.org" target="_blank">Site officiel de Paris 2024</a></li>
+
+                </ul>
+            </article>
+    
+            <article class="infrastructure">
+                <h3>2. Transports </h3>
+                <p>Les informations sur les transports pour les JO proviennent des sources suivantes :</p>
+                <ul>
+                    <li><a href="https://www.transportsparis.com" target="_blank">Transports à Paris</a></li>
+                    <li><a href="https://www.paris2024.org" target="_blank">Paris 2024 - Mobilité</a></li>
+                    <li><a href="https://www.olympic.org" target="_blank">Comité International Olympique</a></li>
+                </ul>
+            </article>
+    
+            <article class="infrastructure">
+                <h3>3. Épreuves </h3>
+                <p>Les informations sur les épreuves olympiques proviennent des sources suivantes :</p>
+                <ul>
+                    <li><a href="https://www.paris2024.org" target="_blank">Paris 2024 - Épreuves</a></li>
+                    <li><a href="https://www.olympic.org" target="_blank">Comité International Olympique</a></li>
+                    <li><a href="https://www.francetvinfo.fr" target="_blank">France TV - Épreuves Paris 2024</a></li>
+                </ul>
+            </article>
+    
+            <article class="infrastructure">
+                <h3>4. Réalisations Pérennes </h3>
+                <p>Les informations sur les réalisations pérennes après les JO proviennent des sources suivantes :</p>
+                <ul>
+                    <li><a href="https://www.paris2024.org" target="_blank">Paris 2024 - Héritage</a></li>
+                    <li><a href="https://www.olympic.org" target="_blank">Comité International Olympique</a></li>
+                    <li><a href="https://www.lemonde.fr" target="_blank">Le Monde - Impact à long terme</a></li>
+                </ul>
+            </article>
+    
+            <article class="infrastructure">
+                <h3>5. Transports Durables </h3>
+                <p>Les informations sur les transports durables proviennent des sources suivantes :</p>
+                <ul>
+                    <li><a href="https://www.transportsparis.com" target="_blank">Transports à Paris</a></li>
+                    <li><a href="https://www.paris2024.org" target="_blank">Paris 2024 - Mobilité durable</a></li>
+                    <li><a href="https://www.olympic.org" target="_blank">Comité International Olympique</a></li>
+                </ul>
+            </article>
+    
+            <article class="infrastructure">
+                <h3>6. Impact Social et Environnemental </h3>
+                <p>Les informations sur l'impact social et environnemental proviennent des sources suivantes :</p>
+                <ul>
+                    <li><a href="https://www.paris2024.org" target="_blank">Paris 2024 - Impact social et environnemental</a></li>
+                    <li><a href="https://www.olympic.org" target="_blank">Comité International Olympique</a></li>
+                    <li><a href="https://www.francetvinfo.fr" target="_blank">France TV - Impact social</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    
+
+    <footer class="main-footer">
+        <p id="footer-text" data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman</p>
+    </footer>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+    
+        // Vérifier si le thème sombre est déjà activé dans le stockage local
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        // Changer le thème lorsque l'utilisateur clique sur le switch
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

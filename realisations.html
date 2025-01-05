@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations Pérennes - Paris 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" class="active" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html" data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        <h1 id="page-title" data-fr="Réalisations Pérennes - Paris 2024" data-en="Sustainable Achievements - Paris 2024">Réalisations Pérennes - Paris 2024</h1>
+    </header>
+
+
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+    
+
+
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png"  style="max-width: 20px; margin-left: 40%;">     </span>
+        <span class="flag"><img src="gb.png"style="max-width: 25px; ">  </span>
+        <div class="toggle-btn"></div>
+    </div>
+    
+    <script>
+       
+        document.getElementById("language-toggle").addEventListener("click", function() {
+         const currentLang = this.getAttribute("data-lang");
+         const newLang = currentLang === "fr" ? "en" : "fr";
+         this.setAttribute("data-lang", newLang);
+         
+         // Récupérer tous les éléments avec des attributs data-fr et data-en
+         const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+         elementsToTranslate.forEach(element => {
+             // Récupérer le texte dans l'attribut approprié
+             const text = element.getAttribute(`data-${newLang}`);
+             if (text) {
+                 element.textContent = text; // Mettre à jour le texte affiché
+             }
+         });
+ 
+         console.log("Langue sélectionnée :", newLang);
+     });
+   </script>
+
+<main class="content">
+    <section class="hero">
+        <h2 data-fr="Réalisations Pérennes après les JOP2024" data-en="Sustainable Legacies after the Paris 2024 Olympics">Réalisations Pérennes après les JOP2024</h2>
+        <p data-fr="Les infrastructures pérennes créées pour les Jeux Olympiques de Paris 2024 laissent un héritage durable et écoresponsable." data-en="The lasting infrastructures created for the Paris 2024 Olympic Games leave a sustainable and eco-friendly legacy.">Les infrastructures pérennes créées pour les Jeux Olympiques de Paris 2024 laissent un héritage durable et écoresponsable.</p>
+    </section>
+
+    <section class="details">
+        <article class="infrastructure">
+            <h3 data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</h3>
+            <p data-fr="Maintenant que les JOP sont terminées, le village Olympique est en cours de transition pour devenir un nouveau quartier de Saint-Ouen, créé sur une ancienne friche industrielle." data-en="Now that the Olympic Games are over, the Olympic Village is being transformed into a new district in Saint-Ouen, built on a former industrial wasteland.">Maintenant que les JOP sont terminées, le village Olympique est en cours de transition pour devenir un nouveau quartier de Saint-Ouen, créé sur une ancienne friche industrielle.</p>
+            <p data-fr="Les bâtiments sont transformés en 2800 logements familiaux, pouvant accueillir près de 6 000 nouveaux habitants, contribuant à lutter contre le manque de logements." data-en="The buildings are being converted into 2,800 family homes, accommodating nearly 6,000 new residents, helping to address the housing shortage.">Les bâtiments sont transformés en 2800 logements familiaux, pouvant accueillir près de 6 000 nouveaux habitants, contribuant à lutter contre le manque de logements.</p>
+            <p data-fr="Un projet en harmonie avec l’environnement, accompagné de la plantation de 9 000 arbres et de 15 hectares d’espaces publics aménagés, comprenant pistes cyclables et promenade le long de la Seine." data-en="A project in harmony with the environment, accompanied by the planting of 9,000 trees and 15 hectares of landscaped public spaces, including bike paths and a promenade along the Seine.">Un projet en harmonie avec l’environnement, accompagné de la plantation de 9 000 arbres et de 15 hectares d’espaces publics aménagés, comprenant pistes cyclables et promenade le long de la Seine.</p>
+        </article>
+
+        <article class="infrastructure">
+            <h3 data-fr="Transports" data-en="Transport Networks">Transports</h3>
+            <p data-fr="La construction de lignes de métro et de RER définitives desservira l’Île-de-France même après les JOP, facilitant les déplacements quotidiens des habitants." data-en="The construction of permanent metro and RER lines will serve the Île-de-France region even after the Games, facilitating daily travel for residents.">La construction de lignes de métro et de RER définitives desservira l’Île-de-France même après les JOP, facilitant les déplacements quotidiens des habitants.</p>
+            <p data-fr="Des villes auparavant non desservies bénéficieront désormais d’une meilleure accessibilité grâce à ces infrastructures durables." data-en="Cities previously underserved will now benefit from better accessibility thanks to these sustainable infrastructures.">Des villes auparavant non desservies bénéficieront désormais d’une meilleure accessibilité grâce à ces infrastructures durables.</p>
+        </article>
+
+        <article class="infrastructure">
+            <h3 data-fr="Sites d’Épreuves" data-en="Event Venues">Sites d’Épreuves</h3>
+            <p data-fr="Les sites utilisés pour les épreuves des JOP2024 ont été conçus pour être réutilisés à long terme, garantissant une exploitation pérenne et un accès public aux installations sportives." data-en="The venues used for the Paris 2024 Olympic events were designed for long-term reuse, ensuring sustainable operations and public access to sports facilities.">Les sites utilisés pour les épreuves des JOP2024 ont été conçus pour être réutilisés à long terme, garantissant une exploitation pérenne et un accès public aux installations sportives.</p>
+        </article>
+    </section>
+</main>
+
+
+    <footer class="main-footer">
+        <p id="footer-text" data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman</p>
+    </footer>
+
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+    
+        // Vérifier si le thème sombre est déjà activé dans le stockage local
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        // Changer le thème lorsque l'utilisateur clique sur le switch
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+    
+
+
+</body>
+</html>

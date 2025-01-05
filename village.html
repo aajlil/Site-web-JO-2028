@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-fr="Village Olympique - Paris 2024" data-en="Olympic Village - Paris 2024">Village Olympique - Paris 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="village.html" class="active" data-fr="Village Olympique" data-en="Olympic Village">Village Olympique</a></li>
+                <li><a href="transports.html" data-fr="Transports" data-en="Transport">Transports</a></li>
+                <li><a href="epreuves.html" data-fr="Épreuves" data-en="Events">Épreuves</a></li>
+                <li><a href="realisations.html" data-fr="Réalisations Pérennes" data-en="Sustainable Achievements">Réalisations Pérennes</a></li>
+                <li><a href="transportsDurables.html" data-fr="Transports Durables" data-en="Sustainable Transport">Transports Durables</a></li>
+                <li><a href="impact.html" data-fr="Impact Social et Environnemental" data-en="Social and Environmental Impact">Impact Social et Environnemental</a></li>
+                <li><a href="reportage.html" data-fr="Reportage" data-en="Report">Reportage</a></li>
+                <li><a href="annexes.html" data-fr="Annexes" data-en="Appendices">Annexes</a></li>
+            </ul>
+        </nav>
+        <h1 data-fr="Village des Jeux Olympiques de Paris 2024" data-en="Paris 2024 Olympic Village">Village des Jeux Olympiques de Paris 2024</h1>
+    </header>
+
+
+
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Thème sombre</span>
+    </div>
+
+
+
+
+
+    <div class="toggle-container" id="language-toggle" data-lang="fr" style="left: 50%; right: 50%;">
+        <span class="flag"><img src="fr.png" style="max-width: 20px; margin-left: 40%;"> </span>
+        <span class="flag"><img src="gb.png" style="max-width: 25px;"> </span>
+        <div class="toggle-btn"></div>
+    </div>
+
+    <script>
+        document.getElementById("language-toggle").addEventListener("click", function() {
+            const currentLang = this.getAttribute("data-lang");
+            const newLang = currentLang === "fr" ? "en" : "fr";
+            this.setAttribute("data-lang", newLang);
+         
+            // Récupérer tous les éléments avec des attributs data-fr et data-en
+            const elementsToTranslate = document.querySelectorAll("[data-fr], [data-en]");
+         
+            elementsToTranslate.forEach(element => {
+                // Récupérer le texte dans l'attribut approprié
+                const text = element.getAttribute(`data-${newLang}`);
+                if (text) {
+                    element.textContent = text; // Mettre à jour le texte affiché
+                }
+            });
+
+            console.log("Langue sélectionnée :", newLang);
+        });
+    </script>
+    <section class="hero">
+        <h2 data-fr="Le village des athlètes" data-en="The Athlete Village">Le village des athlètes</h2>
+        <p data-fr="Ouvert le 29 février 2024, le Village olympique et paralympique est plus qu'un simple hébergement pour les athlètes. Il est conçu pour devenir, après les Jeux, un quartier vivant au cœur de Seine-Saint-Denis. Ce projet ambitieux, sélectionné parmi plusieurs candidatures en 2019, met l'accent sur le développement durable et répond aux besoins des athlètes tout en créant un héritage positif pour la région." data-en="Opened on February 29, 2024, the Olympic and Paralympic Village is more than just accommodation for athletes. It is designed to become, after the Games, a lively neighborhood in the heart of Seine-Saint-Denis. This ambitious project, selected from several candidacies in 2019, focuses on sustainable development and meets the needs of athletes while creating a positive legacy for the region.">Ouvert le 29 février 2024, le Village olympique et paralympique est plus qu'un simple hébergement pour les athlètes. Il est conçu pour devenir, après les Jeux, un quartier vivant au cœur de Seine-Saint-Denis. Ce projet ambitieux, sélectionné parmi plusieurs candidatures en 2019, met l'accent sur le développement durable et répond aux besoins des athlètes tout en créant un héritage positif pour la région.</p>
+    </section>
+
+    <div class="container">
+        <section id="main">
+            <div class="info-box">
+                <div class="text">
+                    <h2 data-fr="Un Village pensé avec les athlètes" data-en="A Village designed with athletes in mind">Un Village pensé avec les athlètes</h2>
+                    <p data-fr="Les athlètes ont joué un rôle clé dans la conception du Village olympique et paralympique de Paris 2024. Ils ont partagé leurs expériences et leurs souhaits, qui ont été rassemblés dans un manifeste. Ce document guidera la construction du Village, pour qu'il réponde aux besoins et aux attentes de ceux qui y vivront pendant les Jeux." data-en="Athletes played a key role in the design of the Paris 2024 Olympic and Paralympic Village. They shared their experiences and wishes, which were gathered in a manifesto. This document will guide the construction of the Village to ensure it meets the needs and expectations of those who will live there during the Games.">Les athlètes ont joué un rôle clé dans la conception du Village olympique et paralympique de Paris 2024. Ils ont partagé leurs expériences et leurs souhaits, qui ont été rassemblés dans un manifeste. Ce document guidera la construction du Village, pour qu'il réponde aux besoins et aux attentes de ceux qui y vivront pendant les Jeux.</p>
+                </div>
+                <div class="image">
+                    <img src="olupm.jpg" alt="Village Olympique">
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="image">
+                    <img src="paralympique.jpeg" alt="Village en chiffres">
+                </div>
+                <div class="text">
+                    <h2 data-fr="Le Village olympique et paralympique en chiffres :" data-en="The Olympic and Paralympic Village in numbers:">Le Village olympique et paralympique en chiffres :</h2>
+                    <p data-fr="Réparti sur trois communes, le Village olympique sera un véritable petit monde pour les athlètes. Il pourra accueillir des milliers d'entre eux et leur proposera une multitude de services : une salle à manger géante, un hôpital ouvert en permanence et même un atelier de réparation pour les athlètes paralympiques. Une fois les Jeux terminés, ce quartier dynamique accueillera de nouveaux habitants dès 2025." data-en="Spread across three municipalities, the Olympic Village will be a true small world for athletes. It will be able to accommodate thousands of them and offer a wide range of services: a giant dining hall, a 24/7 hospital, and even a repair workshop for Paralympic athletes. Once the Games are over, this vibrant neighborhood will welcome new residents as early as 2025.">Réparti sur trois communes, le Village olympique sera un véritable petit monde pour les athlètes. Il pourra accueillir des milliers d'entre eux et leur proposera une multitude de services : une salle à manger géante, un hôpital ouvert en permanence et même un atelier de réparation pour les athlètes paralympiques. Une fois les Jeux terminés, ce quartier dynamique accueillera de nouveaux habitants dès 2025.</p>
+                    <p data-fr="Après les Jeux, dès 2025 le quartier comportera :" data-en="After the Games, from 2025, the neighborhood will include:">Après les Jeux, dès 2025 le quartier comportera :</p>
+                    <ul>
+                        <li data-fr="52 hectares, soit 70 terrains de football" data-en="52 hectares, or 70 football fields">52 hectares, soit 70 terrains de football</li>
+                        <li data-fr="6000 habitants bénéficiaires" data-en="6000 residents" >6000 habitants bénéficiaires</li>
+                        <li data-fr="Plus de 2800 nouveaux logements dont 2000 logements familiaux et 800 logements en résidence" data-en="More than 2800 new homes, including 2000 family homes and 800 residences">Plus de 2800 nouveaux logements dont 2000 logements familiaux et 800 logements en résidence</li>
+                        <li data-fr="1 résidence étudiante" data-en="1 student residence">1 résidence étudiante</li>
+                        <li data-fr="1 hôtel" data-en="1 hotel">1 hôtel</li>
+                        <li data-fr="2 nouveaux groupes scolaires" data-en="2 new schools">2 nouveaux groupes scolaires</li>
+                        <li data-fr="6 hectares d’espaces verts dont un parc public en cœur de quartier" data-en="6 hectares of green spaces, including a public park in the heart of the neighborhood">6 hectares d’espaces verts dont un parc public en cœur de quartier</li>
+                        <li data-fr="Des espaces végétalisés, réservés aux piétons et aux mobilités douces" data-en="Green spaces for pedestrians and soft mobility">Des espaces végétalisés, réservés aux piétons et aux mobilités douces</li>
+                        <li data-fr="120 000m² d’activités, bureaux et services pouvant recevoir 6000 salariés" data-en="120,000m² of activities, offices, and services, able to accommodate 6000 employees">120 000m² d’activités, bureaux et services pouvant recevoir 6000 salariés</li>
+                        <li data-fr="3200m² de commerces de proximité" data-en="3200m² of local shops">3200m² de commerces de proximité</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="text">
+                    <h2 data-fr="Laisser la ville de demain en héritage" data-en="Leaving the city of tomorrow as a legacy">Laisser la ville de demain en héritage</h2>
+                    <p data-fr="Les projets choisis pour le Village sont non seulement beaux, mais aussi très écologiques. Ils correspondent aux objectifs de Paris 2024 de réduire les émissions de gaz à effet de serre et de construire des bâtiments économes en énergie. C'est un exemple de ce à quoi les villes pourraient ressembler en 2050 :" data-en="The projects chosen for the Village are not only beautiful but also very eco-friendly. They align with Paris 2024's goals of reducing greenhouse gas emissions and constructing energy-efficient buildings. This is an example of what cities could look like in 2050:">Les projets choisis pour le Village sont non seulement beaux, mais aussi très écologiques. Ils correspondent aux objectifs de Paris 2024 de réduire les émissions de gaz à effet de serre et de construire des bâtiments économes en énergie. C'est un exemple de ce à quoi les villes pourraient ressembler en 2050 :</p>
+                    <ul>
+                        <li data-fr="Protéger la nature et favoriser la biodiversité : Pour préserver la nature, le Village sera aménagé avec des toits verts, des clôtures naturelles et une grande variété de plantes. C'est comme créer une petite forêt en ville !" data-en="Protect nature and encourage biodiversity: To preserve nature, the Village will be landscaped with green roofs, natural fences, and a wide variety of plants. It's like creating a small forest in the city!">Protéger la nature et favoriser la biodiversité : Pour préserver la nature, le Village sera aménagé avec des toits verts, des clôtures naturelles et une grande variété de plantes. C'est comme créer une petite forêt en ville !</li>
+                        <li data-fr="Réduire l'impact sur l'environnement : Pour lutter contre le réchauffement climatique, le Village sera construit avec des matériaux écologiques et équipé de panneaux solaires et de géothermie. C'est un exemple de ville durable pour demain !" data-en="Reduce environmental impact: To fight climate change, the Village will be built with eco-friendly materials and equipped with solar panels and geothermal energy. It's an example of a sustainable city for tomorrow!">Réduire l'impact sur l'environnement : Pour lutter contre le réchauffement climatique, le Village sera construit avec des matériaux écologiques et équipé de panneaux solaires et de géothermie. C'est un exemple de ville durable pour demain !</li>
+                        <li data-fr="Encourager la mobilité durable : Le Village sera accessible à pied ou en vélo. Il sera traversé par des pistes cyclables, des trottoirs et des voies piétonnes pour encourager une mobilité verte et réduire l'usage des voitures !" data-en="Encourage sustainable mobility: The Village will be accessible by foot or bike. It will feature bike lanes, sidewalks, and pedestrian pathways to encourage green mobility and reduce car use!">Encourager la mobilité durable : Le Village sera accessible à pied ou en vélo. Il sera traversé par des pistes cyclables, des trottoirs et des voies piétonnes pour encourager une mobilité verte et réduire l'usage des voitures !</li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="archi.jpeg" alt="Héritage durable">
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="image">
+                    <img src="services.jpeg" alt="Services et commodités">
+                </div>
+                <div class="text">
+                    <h2>Services et commodités</h2>
+                    <p>Pendant les Jeux, le Village mettra à disposition des hébergements équipés d'espaces réservés à chaque équipe, ainsi qu'une variété de services pour faciliter leur préparation :</p>
+                    <ul>
+                        <li>Accueil et service de blanchisserie</li>
+                        <li>Espaces de repos</li>
+                        <li>Aires de restauration</li>
+                        <li>Sites d'entraînement</li>
+                        <li>Un centre médical appelé "Polyclinique"</li>
+                        <li>Un lieu de culte multiconfessionnel</li>
+                        <li>Un terminal pour les transports en commun</li>
+                        <li>Une salle de remise en forme</li>
+                        <li>Une place centrale regroupant des services pratiques pour la vie quotidienne (banque, poste, coiffeur, petite épicerie…), ainsi que des espaces de loisirs et de cérémonies pour les athlètes et leurs invités.</li>
+                    </ul>
+                    <p>L'ensemble de ces services sera relié par un système de navettes internes. De plus, un service d'entretien sera déployé dans tous les espaces du Village.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="text">
+                    <h2>Développement durable</h2>
+                    <p>Le Village Olympique est conçu selon des principes écologiques avancés :</p>
+                    <ul>
+                        <li>Utilisation de matériaux biosourcés et bas carbone</li>
+                        <li>Toitures végétalisées et panneaux solaires</li>
+                        <li>Système de récupération des eaux de pluie</li>
+                        <li>Espaces verts favorisant la biodiversité</li>
+                    </ul>
+                    <p>Après les Jeux, le Village sera transformé en un quartier résidentiel durable, laissant un héritage positif pour la région.</p>
+                </div>
+                <div class="image">
+                    <img src="devdur.jpeg" alt="Développement durable">
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="image">
+                    <img src="succes.jpg" alt="Mission réussie">
+                </div>
+                <div class="text">
+                    <h2>Mission réussie</h2>
+                    <p>La sécurité est une priorité absolue, avec un système de contrôle d'accès sophistiqué et une surveillance 24h/24. Le Village est entièrement accessible aux personnes à mobilité réduite, en prévision des Jeux Paralympiques. Des navettes régulières relient le Village aux sites de compétition, assurant un transport efficace et sûr pour les athlètes.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="main-footer">
+        <p id="footer-text" data-fr="&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman" data-en="&copy; 2024 - SAE Project - Lokmen-Ghassen-Kishan-Elliot-Ayman">&copy; 2024 - Projet SAE - Lokmen-Ghassen-Kishan-Elliot-Ayman</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+    
+        // Vérifier si le thème sombre est déjà activé dans le stockage local
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        // Changer le thème lorsque l'utilisateur clique sur le switch
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+</body>
+</html>
